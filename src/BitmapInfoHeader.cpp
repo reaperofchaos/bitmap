@@ -1,6 +1,6 @@
 #include "BitmapInfoHeader.h"
 
-void BmpInfoHeader::save_on_file(std::ofstream &fout)
+void BitmapInfoHeader::save_on_file(std::ofstream &fout)
 {
     fout.write((char *)&this->sizeOfThisHeader, sizeof(uint32_t));
     fout.write((char *)&this->width, sizeof(int32_t));

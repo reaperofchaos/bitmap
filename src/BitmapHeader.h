@@ -12,5 +12,10 @@ private:
     uint32_t pixelDataOffset = 54;
 
 public:
+    BmpHeader() {}
+    BmpHeader(int32_t height, int32_t width)
+    {
+        this->sizeOfBitmapFile = 54 + (height * width * 3);
+    }
     void save_on_file(std::ofstream &fout);
 };
